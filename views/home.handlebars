@@ -1,0 +1,28 @@
+<main class="lista-vacantes">
+    <h2>Lista de Vacantes</h2>
+
+    {{#if vacancies.length}}
+        {{#each vacancies}}
+            <div class="vacante">
+                <div class="caja">
+                    <h3>{{company}}</h3>
+                    <p class="puesto">{{title}}</p>
+                </div>
+                <div class="caja">
+                    <p class="etiqueta">Ubicación</p>
+                    <p class="nombre">{{location}}</p>
+                </div>
+                <div class="caja">
+                    <p class="etiqueta">Contrato</p>
+                    <p class="nombre contrato">{{contract}}</p>
+                </div>
+                <div class="caja centrar-vertical">
+                    <a href="/vacancies/{{url}}" class="btn btn-verde">Más info</a>
+                </div>
+            </div>  
+        {{/each}}
+    {{else}}
+        <p>No hay vacantes actualmente.</p>
+    {{/if}}
+
+</main>
